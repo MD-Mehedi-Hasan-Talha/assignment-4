@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CartContext } from "../Contexts";
 import showToastMessage from "../utils/showToastMessage";
-import textShortener from "../utils/TextShortener";
+import textShortener from "../utils/textShortener";
 
 export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
