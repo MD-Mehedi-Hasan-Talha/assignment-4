@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CartContext } from "../Contexts";
 import showToastMessage from "../utils/showToastMessage";
-import textShortener from "../utils/textShortener";
+// import textShortener from "../utils/textShortener";
 
 export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
@@ -29,4 +29,12 @@ export default function CartProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
+}
+
+function textShortener(text, maxChar) {
+  if (text.length > maxChar) {
+    return `${text.slice(0, maxChar)}...`;
+  }
+
+  return text;
 }
